@@ -51,6 +51,8 @@ private class FakeTimeEntryDao : TimeEntryDao {
     override suspend fun getOverlapping(rangeStart: Long, rangeEnd: Long): List<TimeEntry> =
         entries.filter { it.startTime < rangeEnd && (it.endTime == null || it.endTime!! > rangeStart) }
     override suspend fun getById(id: Long): TimeEntry? = entries.find { it.id == id }
+    override suspend fun hasAnyEntryBefore(beforeMillis: Long): Boolean =
+        entries.any { it.startTime < beforeMillis }
 }
 
 private class FakeTimeSource(var now: Long) : TimeSource {
