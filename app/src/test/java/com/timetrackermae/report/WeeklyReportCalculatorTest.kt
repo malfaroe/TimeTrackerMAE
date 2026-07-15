@@ -48,7 +48,7 @@ class WeeklyReportCalculatorTest {
     @Test
     fun `entry crossing multiple midnights splits into N buckets`() {
         val sat = mondayWeek1.plusDays(5) // Saturday
-        val mon2 = mondayWeek1.plusDays(9) // following Monday
+        val mon2 = mondayWeek1.plusDays(7) // following Monday
         // Sat 22:00 -> Mon 03:00 (next week): Sat(2h), Sun(24h), Mon(3h)
         val entry = TimeEntry(1, projectId = 1L, startTime = millisAt(sat, 22), endTime = millisAt(mon2, 3))
         val split = WeeklyReportCalculator.splitAcrossDays(entry, zone, Instant.now())
