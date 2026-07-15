@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00897B</color>
+    <color name="colorPrimaryDark">#00695C</color>
+    <color name="colorAccent">#4DB6AC</color>
+
+    <!-- Fixed cyclic palette for project colors (Success Criteria: 8-10 colors,
+         reused/cycled once project count exceeds this list). Chosen manually
+         at project creation — see Next Steps step 3. -->
+    <color name="project_color_1">#3F51B5</color>
+    <color name="project_color_2">#009688</color>
+    <color name="project_color_3">#FF9800</color>
+    <color name="project_color_4">#E91E63</color>
+    <color name="project_color_5">#4CAF50</color>
+    <color name="project_color_6">#9C27B0</color>
+    <color name="project_color_7">#FFC107</color>
+    <color name="project_color_8">#607D8B</color>
+
+    <!-- "Otros" bucket wedge — projects under 5% of the weekly total. -->
+    <color name="others_bucket_color">#BDBDBD</color>
+</resources>

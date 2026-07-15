@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TimeTrackerMAE</string>
+    <string name="nav_timer">Timer</string>
+    <string name="nav_report">Reporte</string>
+    <string name="new_project">+ Nuevo proyecto</string>
+    <string name="project_name_hint">Nombre del proyecto…</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="save">Guardar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="today">Hoy</string>
+    <string name="this_week">Esta semana</string>
+    <string name="first_week_no_comparison">Primera semana — sin comparación</string>
+    <string name="hours_per_day">Horas por día</string>
+    <string name="hours_per_project">Por proyecto</string>
+    <string name="others_bucket">Otros</string>
+    <string name="create_first_project_title">Creá tu primer proyecto</string>
+</resources>
