@@ -21,12 +21,16 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      # Pure-Kotlin unit tests only (WeeklyReportCalculator, ChartMath,
-      # TimerViewModel) — no Android SDK/emulator needed, so this finishes in
-      # seconds and gives fast feedback decoupled from the full APK build
-      # (design doc: Approach B feasibility mitigation).
+      # Debug variant only — this app never ships a release build (see
+      # Distribution Plan), so building/kapt-ing release here is pure waste.
+      # It's also what caused kaptDebugKotlin to crash with a reflection
+      # InvocationTargetException: running both variants' kapt at once
+      # overloads the GitHub Actions runner, a known kapt/JDK17 flakiness
+      # mode. assembleDebug (build.yml) only ever built debug and never hit
+      # it — scoping this job the same way removes the redundant work AND
+      # the failure mode.
       - name: Run unit tests
-        run: ./gradlew test
+        run: ./gradlew testDebugUnitTest
 
       - name: Upload test results
         if: always()
