@@ -88,7 +88,7 @@ fun TimerScreen(viewModel: TimerViewModel) {
 
             if (state.runningEntry != null) {
                 Button(onClick = { viewModel.stopTimer() }, shape = CircleShape, modifier = Modifier.size(140.dp)) {
-                    Text("■ STOP")
+                    Text("■ Detener")
                 }
             } else {
                 OutlinedButton(
@@ -139,7 +139,9 @@ private fun ProjectDropdown(
             readOnly = true,
             label = { Text("Proyecto") },
             trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded) },
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier
+                .fillMaxWidth()
+                .menuAnchor()
         )
         DropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
             projects.forEach { project ->
